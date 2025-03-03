@@ -1,24 +1,21 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  BrowserRouter,
+} from "react-router-dom";
 
-function Home() {
-  return <h2>Home</h2>;
-}
-
-function About() {
-  return <h2>About</h2>;
-}
+import HomePage from "./pages/HomePage";
+import MoviePage from "./pages/MoviePage";
 
 function App() {
   return (
-    <Router>
-      <div>
-        <h1>Il mio progetto</h1>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-      </div>
-    </Router>
+    <BrowserRouter>
+      <Routes>
+        <Route index Component={HomePage}></Route>
+        <Route to="/movie/" Component={MoviePage}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
