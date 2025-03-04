@@ -1,6 +1,9 @@
 import axios from "../api/axios";
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+
+import Stars from "../components/ui/StarsIcon";
 
 export default function MoviePage() {
   const { id } = useParams();
